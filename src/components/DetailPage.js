@@ -5,13 +5,7 @@ import modalStyle from '../constants/modalStyle'
 import {withRouter} from 'react-router-dom'
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
-const detailModalStyle = {
-  overlay: modalStyle.overlay,
-  content: {
-    ...modalStyle.content,
-    height: 300,
-  },
-}
+
 
 class DetailPage extends React.Component {
 
