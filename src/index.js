@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
 import ListPage from './components/ListPage'
 import DetailPage from './components/DetailPage'
@@ -9,8 +8,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {ApolloProvider, createNetworkInterface, ApolloClient} from 'react-apollo'
 
 
+import './index.css';
 
-import { Navbar, Panel, Button } from 'react-bootstrap';
 
 //import registerServiceWorker from './registerServiceWorker';
 //ReactDOM.render(<App />, document.getElementById('root'));
