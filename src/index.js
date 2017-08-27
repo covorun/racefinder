@@ -1,19 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
+=======
+import './index.css';
+import NewApp from './components/NewApp';
+>>>>>>> fix-racefinder
 
 import ListPage from './components/ListPage'
-import DetailPage from './components/DetailPage'
+import Single from './components/Single'
 import CreatePage from './components/CreatePage'
+import BestBuy from './components/BestBuy'
+
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {ApolloProvider, createNetworkInterface, ApolloClient} from 'react-apollo'
 
+<<<<<<< HEAD
 
 import './index.css';
 
+=======
+import { Navbar, Panel, Button } from 'react-bootstrap';
+>>>>>>> fix-racefinder
 
-//import registerServiceWorker from './registerServiceWorker';
-//ReactDOM.render(<App />, document.getElementById('root'));
-//registerServiceWorker();
+import registerServiceWorker from './registerServiceWorker';
+registerServiceWorker();
+
 
 
 const networkInterface = createNetworkInterface({
@@ -29,7 +40,9 @@ ReactDOM.render(
       <div>
         <Route exact path='/' component={ListPage} />
         <Route path='/create' component={CreatePage} />
-        <Route path='/race/:id' component={DetailPage} />
+        <Route path='/race/:id' component={Single} />
+        <Route path='/example' component={BestBuy} />
+        <Route path='/routertest' component={NewApp} />
       </div>
     </Router>
   </ApolloProvider>,

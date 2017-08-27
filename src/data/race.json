@@ -1,0 +1,49 @@
+[
+ {
+   "title": "Jack and Jill Downhill Marathon",
+   "id": 1,
+   "url": "http://jackjillmarathon.com/",
+   "courseDescription": "",
+   "organizedBy": {
+      "name": "USA Endurance Events",
+      "email": "LeeAnn@USAEnduranceEvents.com"
+   },
+   "location": {
+      "city": "North Bend",
+      "st": "WA",
+      "country": "USA"
+   },
+   "hasRaceDistance": [
+      { "distance": "5k",
+        "profile": "downhill"
+      },
+      { "distance": "13.1",
+        "profile": "downhill",
+        "surface": "unpaved road",
+         "heldInYear": [
+           { "year": 2016,
+               "date": "7/28/16",
+               "numFinishers": 1316
+            },
+            { "year": 2017,
+               "date": "7/30/17",
+               "numFinishers": 1317
+            }]
+        },
+        { "distance": "26.2",
+         "profile": "downhill",
+         "surface": "unpaved road",
+         "heldInYear": [
+            { "year": 2016,
+               "date": "7/28/16",
+               "numFinishers": 1316
+            },
+            { "year": 2017,
+               "date": "7/30/17",
+               "numFinishers": 1317
+             }
+ 			]
+ 		}
+ 	]
+}
+ ]

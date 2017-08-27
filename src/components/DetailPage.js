@@ -1,7 +1,12 @@
 import React from 'react'
+<<<<<<< HEAD
 import { gql, graphql } from 'react-apollo'
 import {withRouter} from 'react-router-dom'
 
+=======
+import {withRouter} from 'react-router-dom'
+import { gql, graphql } from 'react-apollo'
+>>>>>>> fix-racefinder
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
 
@@ -14,8 +19,7 @@ class DetailPage extends React.Component {
       return (
         <div className='flex w-100 h-100 items-center justify-center pt7'>
           <div>
-            Loading
-            (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})
+
           </div>
         </div>
       )
@@ -67,11 +71,6 @@ const PostQuery = gql`
       id
       url
       name
-      city
-      state
-      paceGroups
-      profile
-      surface
     }
   }
 `
