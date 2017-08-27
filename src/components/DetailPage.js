@@ -1,8 +1,6 @@
 import React from 'react'
-import { gql, graphql } from 'react-apollo'
-import Modal from 'react-modal'
-import modalStyle from '../constants/modalStyle'
 import {withRouter} from 'react-router-dom'
+import { gql, graphql } from 'react-apollo'
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
 const detailModalStyle = {
@@ -21,8 +19,7 @@ class DetailPage extends React.Component {
       return (
         <div className='flex w-100 h-100 items-center justify-center pt7'>
           <div>
-            Loading
-            (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})
+
           </div>
         </div>
       )
@@ -34,7 +31,6 @@ class DetailPage extends React.Component {
     return (
 
           <Panel header={Race.name} bsStyle="info">
-            <h2><a href={Race.url}>{Race.name}</a></h2>
             <p>{Race.city}, {Race.state}</p>
 
             <p>
@@ -45,7 +41,7 @@ class DetailPage extends React.Component {
             <p>Register here: <a href={Race.url}>{Race.url}</a></p>
 
 
-            <Button bsStyle="primary" bsSize="small" onClick={this.props.history.goBack}>>Back</Button>
+            <Button bsStyle="primary" bsSize="small" onClick={this.props.history.goBack}>Back</Button>
           </Panel>
 
     )
@@ -75,11 +71,6 @@ const PostQuery = gql`
       id
       url
       name
-      city
-      state
-      paceGroups
-      profile
-      surface
     }
   }
 `

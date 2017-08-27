@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Race from '../components/Race'
 import { gql, graphql } from 'react-apollo'
+import { Glyphicon, Panel, Button } from 'react-bootstrap';
+import {InstantSearch, SearchBox, Toggle, PoweredBy, HierarchicalMenu, Hits, Highlight, Pagination, RefinementList, ClearAll, CurrentRefinements} from 'react-instantsearch/dom';
+import 'react-instantsearch-theme-algolia/style.scss';
 
 class ListPage extends React.Component {
 
@@ -33,31 +36,22 @@ class ListPage extends React.Component {
       <div className={'w-100 flex justify-center pa6' + blurClass}>
         <div className='w-100 flex flex-wrap br2' style={{maxWidth: 1150}}>
 
-          {this.props.data.allRaces.map(race => (
-            <Race
-              key={race.id}
-              id={race.id}
-              name={race.name}
-              url={race.url}
-              city={race.city}
-              state={race.state}
-              refresh={() => this.props.data.refetch()}
-            />
-          ))}
-        </div>
-        {this.props.children}
 
-        <Link
-          to='/create'
-          className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'
-        >
-          <img
-            src={require('../assets/plus.svg')}
-            alt=''
-            className='plus mb3'
-          />
-          <div>Add a Race</div>
-        </Link>
+                  <InstantSearch
+                  appId="YK5VY15RTR"
+      apiKey="f37057097bc9e803ba420a539f18bd49"
+      indexName="Race"
+                  >
+                    <Search />
+                    <PoweredBy />
+                  </InstantSearch>
+
+        </div>
+
+        <Button href='/create'>
+          <Glyphicon glyph="plus" aria-hidden="true" /> Add a Race
+        </Button>
+
       </div>
     )
   }
@@ -68,8 +62,6 @@ const FeedQuery = gql`query allRaces {
     id
     name
     url
-    city
-    state
   }
 }`
 
@@ -78,5 +70,48 @@ const ListPageWithData = graphql(FeedQuery, {
     fetchPolicy: 'network-only'
   },
 })(ListPage)
+
+const Search = () => {
+    return( <div className="container">
+
+    <Panel>
+
+
+      <SearchBox />
+      <ClearAll/>
+      <CurrentRefinements/>
+      <Toggle
+              attributeName="location/st"
+              label="Washington"
+              value={'Washington State'}
+            />
+
+
+      <Hits hitComponent={Product} />
+      <Pagination />
+      </Panel>
+    </div>)
+};
+
+
+
+const Product = ({hit}) => {
+
+
+
+    return(<Panel>
+      <div className="hit-name"><Highlight attributeName="title" hit={hit} /></div>
+      <div className="hit-name"><Highlight attributeName="courseDescription" hit={hit} /></div>
+    
+      <div className="hit-url"><Highlight attributeName="location/city" hit={hit} />, <Highlight attributeName="location/st" hit={hit} /></div>
+      <div className="hit-url"><a href={hit.url}>{hit.url}</a><br />
+      <Button href={`/race:${hit.objectID}`}>View More</Button>
+      </div>
+
+    </Panel>)
+};
+
+
+
 
 export default ListPageWithData
