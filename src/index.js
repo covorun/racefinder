@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import './index.css';
 import NewApp from './components/NewApp';
 >>>>>>> fix-racefinder
+=======
+import './index.css';
+import NewApp from './components/NewApp';
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 
 import ListPage from './components/ListPage'
 import Single from './components/Single'
@@ -15,12 +20,19 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {ApolloProvider, createNetworkInterface, ApolloClient} from 'react-apollo'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 
+import { Navbar, Panel, Button } from 'react-bootstrap';
 import './index.css';
 
+<<<<<<< HEAD
 =======
 import { Navbar, Panel, Button } from 'react-bootstrap';
 >>>>>>> fix-racefinder
+=======
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 
 import registerServiceWorker from './registerServiceWorker';
 registerServiceWorker();

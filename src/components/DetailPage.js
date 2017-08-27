@@ -1,5 +1,6 @@
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { gql, graphql } from 'react-apollo'
 import {withRouter} from 'react-router-dom'
 
@@ -7,6 +8,11 @@ import {withRouter} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
 import { gql, graphql } from 'react-apollo'
 >>>>>>> fix-racefinder
+=======
+import {withRouter} from 'react-router-dom'
+import { gql, graphql } from 'react-apollo'
+
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
 

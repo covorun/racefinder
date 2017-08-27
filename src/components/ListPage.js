@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Race from '../components/Race'
 import { gql, graphql } from 'react-apollo'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Navbar, Panel, Button, Glyphicon } from 'react-bootstrap';
 
 
@@ -12,6 +13,13 @@ import {InstantSearch, SearchBox, Toggle, PoweredBy, HierarchicalMenu, Hits, Hig
 import 'react-instantsearch-theme-algolia/style.scss';
 >>>>>>> fix-racefinder
 
+=======
+import { Glyphicon, Panel, Button } from 'react-bootstrap';
+import {InstantSearch, SearchBox, Toggle, PoweredBy, HierarchicalMenu, Hits, Highlight, Pagination, RefinementList, ClearAll, CurrentRefinements} from 'react-instantsearch/dom';
+import 'react-instantsearch-theme-algolia/style.scss';
+import { Navbar, Panel, Button, Glyphicon } from 'react-bootstrap';
+
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 class ListPage extends React.Component {
 
   componentWillReceiveProps(nextProps) {
@@ -54,17 +62,26 @@ class ListPage extends React.Component {
 
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {this.props.children}
 =======
 >>>>>>> fix-racefinder
+=======
+        {this.props.children}
+
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
 
         <Button href='/create'>
           <Glyphicon glyph="plus" aria-hidden="true" /> Add a Race
         </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> fix-racefinder
+=======
+
+>>>>>>> b8956845ac7dc2848ae9e60b22ad4d6cd935205b
       </div>
     )
   }
