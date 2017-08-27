@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Race from '../components/Race'
 import { gql, graphql } from 'react-apollo'
+import { Navbar, Panel, Button, Glyphicon } from 'react-bootstrap';
+
+
 
 class ListPage extends React.Component {
 
@@ -47,17 +50,9 @@ class ListPage extends React.Component {
         </div>
         {this.props.children}
 
-        <Link
-          to='/create'
-          className='ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline'
-        >
-          <img
-            src={require('../assets/plus.svg')}
-            alt=''
-            className='plus mb3'
-          />
-          <div>Add a Race</div>
-        </Link>
+        <Button href='/create'>
+          <Glyphicon glyph="plus" aria-hidden="true" /> Add a Race
+        </Button>
       </div>
     )
   }

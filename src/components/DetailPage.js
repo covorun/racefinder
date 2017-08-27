@@ -1,17 +1,10 @@
 import React from 'react'
 import { gql, graphql } from 'react-apollo'
-import Modal from 'react-modal'
-import modalStyle from '../constants/modalStyle'
 import {withRouter} from 'react-router-dom'
+
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
-const detailModalStyle = {
-  overlay: modalStyle.overlay,
-  content: {
-    ...modalStyle.content,
-    height: 300,
-  },
-}
+
 
 class DetailPage extends React.Component {
 
@@ -34,7 +27,6 @@ class DetailPage extends React.Component {
     return (
 
           <Panel header={Race.name} bsStyle="info">
-            <h2><a href={Race.url}>{Race.name}</a></h2>
             <p>{Race.city}, {Race.state}</p>
 
             <p>
@@ -45,7 +37,7 @@ class DetailPage extends React.Component {
             <p>Register here: <a href={Race.url}>{Race.url}</a></p>
 
 
-            <Button bsStyle="primary" bsSize="small" onClick={this.props.history.goBack}>>Back</Button>
+            <Button bsStyle="primary" bsSize="small" onClick={this.props.history.goBack}>Back</Button>
           </Panel>
 
     )
