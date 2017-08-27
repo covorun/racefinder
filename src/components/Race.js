@@ -1,26 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo'
+import { Navbar, Panel, Button, Glyphicon} from 'react-bootstrap';
+
+
 
 
 
 class Race extends React.Component {
+
+
   render() {
+
+    const title = ( <h3><a href={`${this.props.url}`}>{this.props.name}</a></h3>);
+
     return (
-
-      <div>
-      <Link
-        className='bg-white ma3 box post flex flex-column no-underline br2'
-      to={`/race/${this.props.id}`}
-        >
-        <div className='items-center black-80 fw3 description'>
-          <h2><a href={`${this.props.url}`}>{this.props.name}</a></h2>
-          {this.props.city}, {this.props.state}<br />
-          <a href={`/race/${this.props.id}`}>View more details</a>
-
-        </div>
-      </Link>
-      </div>
+      <Panel header={title} bsStyle="info">
+          <p>{this.props.city}, {this.props.state}</p>
+          
+          <Button bsStyle="info" bsSize="small" href={`/race/${this.props.id}`}>View more details</Button>
+          </Panel>
     )
   }
   //<span className='red f6 pointer dim' onClick={this.handleDelete}>Delete</span>

@@ -5,6 +5,7 @@ import { gql, graphql } from 'react-apollo'
 import { Glyphicon, Panel, Button } from 'react-bootstrap';
 import {InstantSearch, SearchBox, Toggle, PoweredBy, HierarchicalMenu, Hits, Highlight, Pagination, RefinementList, ClearAll, CurrentRefinements} from 'react-instantsearch/dom';
 import 'react-instantsearch-theme-algolia/style.scss';
+import { Navbar, Panel, Button, Glyphicon } from 'react-bootstrap';
 
 class ListPage extends React.Component {
 
@@ -47,6 +48,8 @@ class ListPage extends React.Component {
                   </InstantSearch>
 
         </div>
+        {this.props.children}
+
 
         <Button href='/create'>
           <Glyphicon glyph="plus" aria-hidden="true" /> Add a Race

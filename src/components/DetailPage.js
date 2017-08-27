@@ -1,15 +1,10 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
 import { gql, graphql } from 'react-apollo'
+
 import { Navbar, Panel, Button } from 'react-bootstrap';
 
-const detailModalStyle = {
-  overlay: modalStyle.overlay,
-  content: {
-    ...modalStyle.content,
-    height: 300,
-  },
-}
+
 
 class DetailPage extends React.Component {
 

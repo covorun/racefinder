@@ -11,7 +11,10 @@ import BestBuy from './components/BestBuy'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {ApolloProvider, createNetworkInterface, ApolloClient} from 'react-apollo'
 
+
 import { Navbar, Panel, Button } from 'react-bootstrap';
+import './index.css';
+
 
 import registerServiceWorker from './registerServiceWorker';
 registerServiceWorker();
